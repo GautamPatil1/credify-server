@@ -2,11 +2,12 @@
 const express = require('express');
 const cors = require('cors');
 const { MongoClient, ObjectId } = require('mongodb');
+require('dotenv').config();
 
 //setup 
 const PORT = process.env.PORT || 3000;
 const app = express();
-const uri = "mongodb+srv://gautampatil:MGsxw0XPIc2qFGaK@gautam.5nbd8ho.mongodb.net/?retryWrites=true&w=majority";
+const uri = process.env.MONGODB_URI;
 
 //middleware
 app.use(express.json());
