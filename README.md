@@ -132,7 +132,8 @@ Endpoint URL: `https://credify-server.onrender.com/`
 
 - [x] Add API functionality to upload CSV file.
 - [x] Validate Uploaded CSV file.
-- [ ] Add Docker Compose File to Integrate Database into a Docker Container itself.
-- [ ] Add Prisma with PostgreSQL for Backup and Redundancy.
+- [x] Containerize the API.
+- [ ] Add Docker Compose File to Integrate Database into a API Container itself.
+- [x] Add Prisma with PostgreSQL for Backup and Redundancy.
 - [ ] Write Tests for API's.
 - [ ] Add Bulk Email Sending Functionality.

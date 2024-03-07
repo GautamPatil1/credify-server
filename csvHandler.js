@@ -50,7 +50,7 @@ function validateCSV(filePath) {
   // Define required and optional columns
   const requiredColumns = [
     "name",
-    "mail",
+    "email",
     "event_name",
     "event_description",
     "event_date",
