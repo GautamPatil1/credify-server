@@ -127,3 +127,12 @@ Endpoint URL: `https://credify-server.onrender.com/`
 - MongoDB
 - Multer
 - CSV Parser
+
+## Things to do in Future
+
+- [x] Add API functionality to upload CSV file.
+- [x] Validate Uploaded CSV file.
+- [ ] Add Docker Compose File to Integrate Database into a Docker Container itself.
+- [ ] Add Prisma with PostgreSQL for Backup and Redundancy.
+- [ ] Write Tests for API's.
+- [ ] Add Bulk Email Sending Functionality.
