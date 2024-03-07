@@ -3,7 +3,7 @@ name: Build and Push Docker Image
 on:
   push:
     branches:
-      - main  # Change this to match your main branch name
+      - master  # Change this to match your main branch name
 
 jobs:
   build-and-push:
