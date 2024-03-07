@@ -8,6 +8,7 @@ lerna-debug.log*
 .pnpm-debug.log*
 test.rest
 test.js
+index.html
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
 

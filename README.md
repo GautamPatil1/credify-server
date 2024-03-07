@@ -2,6 +2,8 @@
 
 Credify is a  application for a certificate generator web application. This repo provides APIs for managing certificates, handling CSV file uploads, and interacting with a MongoDB database.
 
+Endpoint URL: `https://credify-server.onrender.com/`
+
 ## Installation and Setup
 
 1. Clone this repository to your local machine.
