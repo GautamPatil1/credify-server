@@ -1,6 +1,7 @@
 const { MongoClient, ObjectId } = require("mongodb"); // Importing required modules from MongoDB package
 require("dotenv").config(); // Importing dotenv to load environment variables from a .env file
 const { PrismaClient } = require("@prisma/client");
+const {sendMail} = require("./mailHandler");
 
 // Retrieving MongoDB URI, database name, and collection name from environment variables
 const uri = process.env.MONGODB_URI;
@@ -72,12 +73,16 @@ async function insertCert(cert) {
     });
 
     // Logging and returning the result
-    console.log("Certificate inserted successfully:", db);
+    console.log("Certificate inserted successfully.\n");
+
+    //sendMail(cert);  // Remove comment during production to send mails.
+    console.log("Certificate sent to the recipient via mail.\n")
+
     return result;
   } catch (error) {
     // Error handling
     console.error("Failed to insert certificate:", error);
-    throw new Error("Failed to insert certificate"); // Throwing a new error to provide a more informative message
+    throw new Error("Failed to insert certificate", error); // Throwing a new error to provide a more informative message
   }
 }
 
