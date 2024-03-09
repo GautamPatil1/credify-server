@@ -126,6 +126,6 @@ Endpoint URL: `https://credify-server.onrender.com/`
 - [x] Containerize the API.
 - [ ] Add Docker Compose File to Integrate Database into a API Container itself.
 - [x] Add Prisma with PostgreSQL for Backup and Redundancy.
-- [ ] Write Tests for API &  Integrate it with Github Actions CICD.
+- [x] Write Tests for API &  Integrate it with Github Actions CICD.
 - [x] Add Bulk Email Sending Functionality.
 - [ ] Create an Email Template for recipient receiving new Certificate.
