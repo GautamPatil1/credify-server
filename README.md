@@ -1,8 +1,20 @@
 # Credify - Certificate Generator Web App Backend
 
-Credify is a  application for a certificate generator web application. This repo provides APIs for managing certificates, handling CSV file uploads, and interacting with a MongoDB database.
+Credify is a  application for a certificate generator web application. This repo provides APIs for managing certificates, handling CSV file uploads, and interacting with a MongoDB database & backups data in a PostgreSQL Database.
 
-Endpoint URL: `https://credify-server.onrender.com/`
+Endpoint URL: [https://credify-server.onrender.com/](https://credify-server.onrender.com/)\
+Documentation URL: [https://documenter.getpostman.com/view/33475305/2sA2xh2YPL](https://documenter.getpostman.com/view/33475305/2sA2xh2YPL)
+
+## Things to do in Future
+
+- [x] Add API functionality to upload CSV file.
+- [x] Validate Uploaded CSV file.
+- [x] Containerize the API.
+- [ ] Add Docker Compose File to Integrate Database into a API Container itself.
+- [x] Add Prisma with PostgreSQL for Backup and Redundancy.
+- [x] Write Tests for API &  Integrate it with Github Actions CICD.
+- [x] Add Bulk Email Sending Functionality.
+- [ ] Create an Email Template for recipient receiving new Certificate.
 
 ## Installation and Setup
 
@@ -119,13 +131,4 @@ Endpoint URL: `https://credify-server.onrender.com/`
 - Prisma
 - dotenv
 
-## Things to do in Future
 
-- [x] Add API functionality to upload CSV file.
-- [x] Validate Uploaded CSV file.
-- [x] Containerize the API.
-- [ ] Add Docker Compose File to Integrate Database into a API Container itself.
-- [x] Add Prisma with PostgreSQL for Backup and Redundancy.
-- [x] Write Tests for API &  Integrate it with Github Actions CICD.
-- [x] Add Bulk Email Sending Functionality.
-- [ ] Create an Email Template for recipient receiving new Certificate.

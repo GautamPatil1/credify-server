@@ -100,7 +100,7 @@ app.post("/uploads", upload.single("csvFile"), (req, res) => {
     // Check if a file was uploaded
     if (!req.file) {
       console.log("No file to upload");
-      return res.status(400).send("No CSV file uploaded");
+      return res.status(400).json({"msg": "No CSV file uploaded"});
     }
 
     // Extract file path from the request
@@ -108,16 +108,16 @@ app.post("/uploads", upload.single("csvFile"), (req, res) => {
     validateCSV(filepath)
       .then(async () => {
         await csvToDatabase(filepath);
-        res.status(201).send("File uploaded and processed successfully");
+        res.status(201).json({"msg": "File uploaded and processed successfully"});
       })
       .catch((error) => {
         console.error("Error validating CSV:", error);
-        res.status(400).send(error);
+        res.status(400).json({"msg": "No CSV file uploaded", "error": error});
       });
   } catch (error) {
     // Handle any errors that occur during file upload
     console.error("Error uploading file:", error);
-    res.status(500).send("An error occurred while uploading the file: ", error);
+    res.status(500).json({"msg": "An error occurred while uploading the file.", "error": error});
   }
 });
 
