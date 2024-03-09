@@ -89,22 +89,6 @@ Endpoint URL: `https://credify-server.onrender.com/`
   - Status: 500 Internal Server Error
   - Body: `{ error: "Server Error During fetching Club wise Certificates." }`
 
-### 6\. Get Certificates by Club Name and Event Name
-
-- **URL:** `/certs/club/:club_name/event/:event_name`
-- **Method:** `GET`
-- **Description:** Retrieves certificates belonging to a specific club and event.
-- **Parameters:**
-  - `club_name`: Name of the club.
-  - `event_name`: Name of the event.
-- **Response:**
-  - Array of certificate objects.
-- **Error Response:**
-  - Status: 404 Not Found
-  - Body: `{ error: "Certificates not found" }`
-  - Status: 500 Internal Server Error
-  - Body: `{ error: "Server Error During fetching Event wise Certificates." }`
-
 ## Files
 
 ### 1\. `app.js`
@@ -120,6 +104,10 @@ Endpoint URL: `https://credify-server.onrender.com/`
 
 - Provides functions for handling CSV files, including reading, validating, and uploading them.
 
+### 4\. `mailHandler.js`
+
+- Handles bulk mail sendnig functionality for each recipient.
+
 ## Dependencies
 
 - Node.js
@@ -127,6 +115,9 @@ Endpoint URL: `https://credify-server.onrender.com/`
 - MongoDB
 - Multer
 - CSV Parser
+- Mailgun.js
+- Prisma
+- dotenv
 
 ## Things to do in Future
 
@@ -135,5 +126,6 @@ Endpoint URL: `https://credify-server.onrender.com/`
 - [x] Containerize the API.
 - [ ] Add Docker Compose File to Integrate Database into a API Container itself.
 - [x] Add Prisma with PostgreSQL for Backup and Redundancy.
-- [ ] Write Tests for API's.
-- [ ] Add Bulk Email Sending Functionality.
+- [ ] Write Tests for API &  Integrate it with Github Actions CICD.
+- [x] Add Bulk Email Sending Functionality.
+- [ ] Create an Email Template for recipient receiving new Certificate.

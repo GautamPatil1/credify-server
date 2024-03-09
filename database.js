@@ -76,7 +76,7 @@ async function insertCert(cert) {
     console.log("Certificate inserted successfully.\n");
 
     //sendMail(cert);  // Remove comment during production to send mails.
-    console.log("Certificate sent to the recipient via mail.\n")
+    //console.log("Certificate sent to the recipient via mail.\n")
 
     return result;
   } catch (error) {

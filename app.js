@@ -138,26 +138,6 @@ app.get("/certs/club/:event_club", async (req, res) => {
   }
 });
 
-// Route to Get certificates by event_name
-app.get("/certs/club/:club_name/event/:event_name", async (req, res) => {
-  try {
-    const query = {
-      club_name: req.params.club_name,
-      event_name: req.params.event_name,
-    };
-    const certs = await findCerts(query);
-    if (!certs.length) {
-      return res.status(404).json({ error: "Certificates not found" });
-    }
-    res.json(certs);
-  } catch (error) {
-    console.error("Error fetching Event wise certificates:", error);
-    res
-      .status(500)
-      .json({ error: "Server Error During fetching Event wise Certificates." });
-  }
-});
-
 // Generic error handler
 app.use((err, req, res, next) => {
   console.error(err.stack);
