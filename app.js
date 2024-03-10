@@ -49,15 +49,19 @@ app.post("/cert", async (req, res) => {
       event_date,
       event_club,
       event_branch,
+      organization,
+      logos,
+      signs
     } = req.body;
 
     // Validate required fields
-    if (!name || !email || !event_name || !event_description || !event_date) {
+    if (!name || !email || !event_name || !event_description || !event_date || !organization) {
       return res.status(400).json({ error: "Missing required fields" });
     }
 
     // Ensure no extra fields are present
     const allowedFields = [
+      "organization",
       "name",
       "email",
       "event_name",
@@ -65,6 +69,8 @@ app.post("/cert", async (req, res) => {
       "event_date",
       "event_club",
       "event_branch",
+      "logos",
+      "signs",
     ];
     const extraFields = Object.keys(req.body).filter(
       (field) => !allowedFields.includes(field)
@@ -77,6 +83,7 @@ app.post("/cert", async (req, res) => {
 
     // Create certificate object with validated fields
     const cert = {
+      organization,
       name,
       email,
       event_name,
@@ -84,6 +91,8 @@ app.post("/cert", async (req, res) => {
       event_date,
       event_club,
       event_branch,
+      logos,
+      signs,
     };
 
     const result = await insertCert(cert);

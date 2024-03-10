@@ -15,6 +15,7 @@ datasource db {
 
 model Certificate {
   id                  String    @id
+  organization        String 
   name                String  
   email               String  
   event_name          String  
@@ -22,6 +23,8 @@ model Certificate {
   event_date          String  
   event_branch        String? 
   event_club          String?   
+  logos               String[]
+  signs               String[]
   issued_date         DateTime
 }
 

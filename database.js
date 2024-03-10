@@ -61,6 +61,7 @@ async function insertCert(cert) {
     const db = await prisma.certificate.create({
       data: {
         id: result.insertedId.toString(),
+        organization: cert.organization,
         name: cert.name,
         email: cert.email,
         event_name: cert.event_name,
@@ -68,6 +69,8 @@ async function insertCert(cert) {
         event_date: cert.event_date,
         event_branch: cert.event_branch,
         event_club: cert.event_club,
+        logos: cert.logos,
+        signs: cert.signs,
         issued_date: new Date(), // Using the current date/time
       },
     });
