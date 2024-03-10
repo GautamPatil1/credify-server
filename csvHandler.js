@@ -49,13 +49,14 @@ async function csvToDatabase(file) {
 function validateCSV(filePath) {
   // Define required and optional columns
   const requiredColumns = [
+    "organization",
     "name",
     "email",
     "event_name",
     "event_description",
     "event_date",
   ];
-  const optionalColumns = ["event_branch", "event_club"];
+  const optionalColumns = ["event_branch", "event_club", "logos", "signs"];
 
   // Initialize validation flags and error message
   let isValid = true;
